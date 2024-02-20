@@ -15,3 +15,13 @@ Este programa calcula los números primos en un rango dado de manera paralela ut
 ## Daemons (ejemplo_demonios.py)
 
 Este programa muestra cómo puedes usar un hilo demonio para ejecutar una tarea en segundo plano mientras el programa principal sigue ejecutándose y cómo puedes detener el hilo demonio correctamente cuando sea necesario.
+
++Se define una clase TareaDemonio que hereda de threading.Thread y ejecuta una tarea en segundo plano en un bucle mientras no se detenga.
+
++Se instancia un objeto de TareaDemonio y se configura como demonio.
+
++El programa principal imprime un mensaje indicando que está en ejecución y luego espera a que el usuario presione Ctrl+C para detener la tarea de demonio y finalizar el programa.
+
++La tarea de demonio se ejecuta en segundo plano imprimiendo un mensaje cada segundo.
+
++Cuando se presiona Ctrl+C, se llama al método detener() para establecer una señal que detiene el bucle de la tarea de demonio y luego se une al hilo de la tarea demonio.
